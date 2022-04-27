@@ -1,5 +1,4 @@
 import sys
-from array import *
 from binascii import *
 
 infile=sys.argv[1]+".a0"
@@ -25,8 +24,6 @@ for line in fi:
   if len(line)>1:
      l=line.rstrip()
      x=unhexlify(l.replace(" ",""))
-     data=array('b')
-     data.fromstring(x)
-     data.tofile(fo)
+     fo.write(x)
     
      
